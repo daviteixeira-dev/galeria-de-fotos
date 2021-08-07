@@ -22,3 +22,38 @@ body
     display: flex
     justify-content: space-between
     @include mixins.container
+
+    &-brand // .header-brand
+        color: variables.$primary-color
+        font-size: 3rem
+
+    &-navbar // .header-navbar
+
+        ul
+            height: 100%
+            @include mixins.flex-center
+
+            li
+                margin: 0 1rem
+                text-transform: uppercase
+                font-size: .8rem
+
+                .active
+                    color: variables.$secondary-color
+                
+                a
+                    &:hover
+                        color: variables.$secondary-color
+        
+    &-social-media
+
+        ul
+            @include mixins.flex-center
+            height: 100%
+
+            li
+                margin: 0 1rem
+
+                a
+                    &:hover
+                        color: variables.$primary-color
